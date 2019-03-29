@@ -1,0 +1,214 @@
+ul.videos {
+  margin-left: 0;
+  margin-bottom: 0;
+  clear: both;
+  *zoom: 1;
+}
+ul.videos::before, ul.videos::after {
+  content: " ";
+  display: table;
+}
+ul.videos::after {
+  clear: both;
+}
+ul.videos li.video {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 4.235801032em;
+  text-align: center;
+  position: relative;
+}
+ul.videos li.video img {
+  display: block;
+  margin: 0 auto 1.618em;
+}
+ul.videos li.video h2 {
+  font-size: 1.5em;
+}
+
+ul.videos[class*=columns-] li.video {
+  width: 48%;
+  float: left;
+  clear: both;
+  margin: 0 0 2.992em;
+}
+ul.videos[class*=columns-] li.video:nth-child(2n) {
+  float: right;
+  clear: none !important;
+}
+ul.videos[class*=columns-] ul.videos {
+  clear: both;
+  *zoom: 1;
+}
+ul.videos[class*=columns-] ul.videos::before, ul.videos[class*=columns-] ul.videos::after {
+  content: " ";
+  display: table;
+}
+ul.videos[class*=columns-] ul.videos::after {
+  clear: both;
+}
+ul.videos[class*=columns-] ul.videos li.video {
+  float: left;
+  margin: 0 3.8% 2.992em 0;
+  padding: 0;
+  position: relative;
+  width: 22.05%;
+  margin-left: 0;
+}
+ul.videos[class*=columns-] ul.videos li.first {
+  clear: both;
+}
+ul.videos[class*=columns-] ul.videos li.last {
+  margin-right: 0;
+}
+ul.videos[class*=columns-] ul.videos.columns-1 li.video {
+  width: 100%;
+  margin-right: 0;
+}
+ul.videos[class*=columns-] ul.videos.columns-2 li.video {
+  width: 48%;
+}
+ul.videos[class*=columns-] ul.videos.columns-3 li.video {
+  width: 30.75%;
+}
+ul.videos[class*=columns-] ul.videos.columns-5 li.video {
+  width: 16.95%;
+}
+ul.videos[class*=columns-] ul.videos.columns-6 li.video {
+  width: 13.5%;
+}
+ul.videos[class*=columns-].columns-1 ul.videos li.video {
+  width: 100%;
+  margin-right: 0;
+}
+ul.videos[class*=columns-].columns-2 ul.videos li.video {
+  width: 48%;
+}
+ul.videos[class*=columns-].columns-3 ul.videos li.video {
+  width: 30.75%;
+}
+ul.videos[class*=columns-].columns-5 ul.videos li.video {
+  width: 16.95%;
+}
+ul.videos[class*=columns-].columns-6 ul.videos li.video {
+  width: 13.5%;
+}
+
+@media (min-width: 768px) {
+  /**
+   * Reset mobile video styles
+   */
+  ul.videos li.video {
+    clear: none;
+    width: 100%;
+    float: left;
+    font-size: 0.875em;
+  }
+  ul.videos li.video.first {
+    clear: both !important;
+  }
+  ul.videos li.video.last {
+    margin-right: 0 !important;
+  }
+
+  /**
+   * Full width content area video layout
+   */
+  .page-template-template-fullwidth-php .site-main ul.videos.columns-1 li.video,
+.page-template-template-fullwidth-php .header-widget-region ul.videos.columns-1 li.video,
+.page-template-template-homepage-php .site-main ul.videos.columns-1 li.video,
+.page-template-template-homepage-php .header-widget-region ul.videos.columns-1 li.video,
+.tannebasscorner-full-width-content .site-main ul.videos.columns-1 li.video,
+.tannebasscorner-full-width-content .header-widget-region ul.videos.columns-1 li.video {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+  .page-template-template-fullwidth-php .site-main ul.videos.columns-2 li.video,
+.page-template-template-fullwidth-php .header-widget-region ul.videos.columns-2 li.video,
+.page-template-template-homepage-php .site-main ul.videos.columns-2 li.video,
+.page-template-template-homepage-php .header-widget-region ul.videos.columns-2 li.video,
+.tannebasscorner-full-width-content .site-main ul.videos.columns-2 li.video,
+.tannebasscorner-full-width-content .header-widget-region ul.videos.columns-2 li.video {
+    width: 47.8260869565%;
+    float: left;
+    margin-right: 4.347826087%;
+  }
+  .page-template-template-fullwidth-php .site-main ul.videos.columns-3 li.video,
+.page-template-template-fullwidth-php .header-widget-region ul.videos.columns-3 li.video,
+.page-template-template-homepage-php .site-main ul.videos.columns-3 li.video,
+.page-template-template-homepage-php .header-widget-region ul.videos.columns-3 li.video,
+.tannebasscorner-full-width-content .site-main ul.videos.columns-3 li.video,
+.tannebasscorner-full-width-content .header-widget-region ul.videos.columns-3 li.video {
+    width: 30.4347826087%;
+    float: left;
+    margin-right: 4.347826087%;
+  }
+  .page-template-template-fullwidth-php .site-main ul.videos.columns-4 li.video,
+.page-template-template-fullwidth-php .header-widget-region ul.videos.columns-4 li.video,
+.page-template-template-homepage-php .site-main ul.videos.columns-4 li.video,
+.page-template-template-homepage-php .header-widget-region ul.videos.columns-4 li.video,
+.tannebasscorner-full-width-content .site-main ul.videos.columns-4 li.video,
+.tannebasscorner-full-width-content .header-widget-region ul.videos.columns-4 li.video {
+    width: 21.7391304348%;
+    float: left;
+    margin-right: 4.347826087%;
+  }
+  .page-template-template-fullwidth-php .site-main ul.videos.columns-5 li.video,
+.page-template-template-fullwidth-php .header-widget-region ul.videos.columns-5 li.video,
+.page-template-template-homepage-php .site-main ul.videos.columns-5 li.video,
+.page-template-template-homepage-php .header-widget-region ul.videos.columns-5 li.video,
+.tannebasscorner-full-width-content .site-main ul.videos.columns-5 li.video,
+.tannebasscorner-full-width-content .header-widget-region ul.videos.columns-5 li.video {
+    width: 16.9%;
+    margin-right: 3.8%;
+  }
+  .page-template-template-fullwidth-php .site-main ul.videos.columns-6 li.video,
+.page-template-template-fullwidth-php .header-widget-region ul.videos.columns-6 li.video,
+.page-template-template-homepage-php .site-main ul.videos.columns-6 li.video,
+.page-template-template-homepage-php .header-widget-region ul.videos.columns-6 li.video,
+.tannebasscorner-full-width-content .site-main ul.videos.columns-6 li.video,
+.tannebasscorner-full-width-content .header-widget-region ul.videos.columns-6 li.video {
+    width: 13.0434782609%;
+    float: left;
+    margin-right: 4.347826087%;
+  }
+
+  /**
+   * Main content area (adjacent to sidebar) video layout
+   */
+  .site-main ul.videos li.video {
+    width: 29.4117647059%;
+    float: left;
+    margin-right: 5.8823529412%;
+  }
+  .site-main ul.videos.columns-1 li.video {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+  .site-main ul.videos.columns-2 li.video {
+    width: 48%;
+    margin-right: 3.8%;
+  }
+  .site-main ul.videos.columns-3 li.video {
+    width: 29.4117647059%;
+    float: left;
+    margin-right: 5.8823529412%;
+  }
+  .site-main ul.videos.columns-4 li.video {
+    width: 22.05%;
+    margin-right: 3.8%;
+  }
+  .site-main ul.videos.columns-5 li.video {
+    width: 16.9%;
+    margin-right: 3.8%;
+  }
+  .site-main ul.videos.columns-6 li.video {
+    width: 11.7647058824%;
+    float: left;
+    margin-right: 5.8823529412%;
+  }
+}
+
+/*# sourceMappingURL=cpt-videos.css.map */

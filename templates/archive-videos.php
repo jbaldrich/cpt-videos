@@ -12,7 +12,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		if ( have_posts() ) :
+		$columns = 3;
+		?>
 
 			<header class="page-header">
 				<?php
@@ -21,16 +24,37 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php
-			get_template_part( 'loop' );
+			<div class="columns-<?php echo esc_attr( $columns ); ?>">
+				<ul class="videos">
 
-		else :
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					?>
 
-			get_template_part( 'content', 'none' );
+					<li
+					<?php
+					$class = array( 'video' );
+					if ( 0 === $wp_query->current_post % $columns || 1 === $columns ) {
+						$class[] = 'first';
+					} else if ( 0 === ( $wp_query->current_post + 1 ) % $columns ) {
+						$class[] = 'last';
+					}
+					post_class( $class );
+					?>
+					>
+						<a href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail( 'medium' ); ?>
+							<h2><?php the_title(); ?></h2>
+						</a>
+					</li>
 
-		endif;
-		?>
+					<?php endwhile; ?>
 
+				</ul>
+			</div>
+
+			<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

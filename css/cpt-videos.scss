@@ -1,0 +1,286 @@
+@mixin clearfix() {
+	*zoom: 1;
+
+	&::before,
+	&::after {
+		content: ' ';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+ul.videos {
+	margin-left: 0;
+	margin-bottom: 0;
+	clear: both;
+	@include clearfix;
+
+	li.video {
+		list-style: none;
+		margin-left: 0;
+		margin-bottom: 4.235801032em;
+		text-align: center;
+		position: relative;
+
+		img {
+			display: block;
+			margin: 0 auto 1.618em;
+		}
+
+		h2 {
+			font-size: 1.5em;
+		}
+	}
+}
+
+ul.videos[class*='columns-'] {
+	li.video {
+		width: 48%;
+		float: left;
+		clear: both;
+		margin: 0 0 2.992em;
+
+		&:nth-child( 2n ) {
+			float: right;
+			clear: none !important; // This should never clear.
+		}
+	}
+
+	ul.videos {
+		clear: both;
+		@include clearfix();
+
+		li.video {
+			float: left;
+			margin: 0 3.8% 2.992em 0;
+			padding: 0;
+			position: relative;
+			width: 22.05%;
+			margin-left: 0;
+		}
+
+		li.first {
+			clear: both;
+		}
+
+		li.last {
+			margin-right: 0;
+		}
+	}
+
+	ul.videos {
+		&.columns-1 {
+			li.video {
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+		&.columns-2 {
+			li.video {
+				width: 48%;
+			}
+		}
+		&.columns-3 {
+			li.video {
+				width: 30.75%;
+			}
+		}
+		&.columns-5 {
+			li.video {
+				width: 16.95%;
+			}
+		}
+		&.columns-6 {
+			li.video {
+				width: 13.5%;
+			}
+		}
+	}
+
+	&.columns-1 {
+		ul.videos {
+			li.video {
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.columns-2 {
+		ul.videos {
+			li.video {
+				width: 48%;
+			}
+		}
+	}
+
+	&.columns-3 {
+		ul.videos {
+			li.video {
+				width: 30.75%;
+			}
+		}
+	}
+
+	&.columns-5 {
+		ul.videos {
+			li.video {
+				width: 16.95%;
+			}
+		}
+	}
+
+	&.columns-6 {
+		ul.videos {
+			li.video {
+				width: 13.5%;
+			}
+		}
+	}
+}	
+
+@media (min-width: 768px) {
+	/**
+	 * Reset mobile video styles
+	 */
+	 ul.videos {
+		li.video {
+			clear: none;
+			width: 100%;
+			float: left;
+			font-size: 0.875em;
+
+			&.first {
+				clear: both !important;
+			}
+
+			&.last {
+				margin-right: 0 !important;
+			}
+		}
+	}
+
+	/**
+	 * Full width content area video layout
+	 */
+	.page-template-template-fullwidth-php,
+	.page-template-template-homepage-php,
+	.tannebasscorner-full-width-content {
+		.site-main,
+		.header-widget-region {
+			ul.videos {
+				&.columns-1 {
+					li.video {
+						width: 100%;
+						margin-right: 0;
+						float: none;
+					}
+				}
+
+				&.columns-2 {
+					li.video {
+						width: 47.8260869565%;
+						float: left;
+						margin-right: 4.347826087%
+					}
+				}
+
+				&.columns-3 {
+					li.video {
+						width: 30.4347826087%;
+						float: left;
+						margin-right: 4.347826087%
+					}
+				}
+
+				&.columns-4 {
+					li.video {
+						width: 21.7391304348%;
+						float: left;
+						margin-right: 4.347826087%
+					}
+				}
+
+				// The grid wont work for 5 columns :-(
+				&.columns-5 {
+					li.video {
+						width: 16.9%;
+						margin-right: 3.8%;
+					}
+				}
+
+				&.columns-6 {
+					li.video {
+						width: 13.0434782609%;
+						float: left;
+						margin-right: 4.347826087%
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * Main content area (adjacent to sidebar) video layout
+	 */
+	.site-main {
+		ul.videos {
+			li.video {
+				width: 29.4117647059%;
+				float: left;
+				margin-right: 5.8823529412%;
+			}
+
+			&.columns-1 {
+				li.video {
+					width: 100%;
+					margin-right: 0;
+					float: none;
+				}
+			}
+
+			// The grid wont work for 2 columns :-(
+			&.columns-2 {
+				li.video {
+					width: 48%;
+					margin-right: 3.8%;
+				}
+			}
+
+			&.columns-3 {
+				li.video {
+					width: 29.4117647059%;
+					float: left;
+					margin-right: 5.8823529412%;
+				}
+			}
+
+			// The grid wont work for 4 columns :-(
+			&.columns-4 {
+				li.video {
+					width: 22.05%;
+					margin-right: 3.8%;
+				}
+			}
+
+			// The grid wont work for 5 columns :-(
+			&.columns-5 {
+				li.video {
+					width: 16.9%;
+					margin-right: 3.8%;
+				}
+			}
+
+			&.columns-6 {
+				li.video {
+					width: 11.7647058824%;
+					float: left;
+					margin-right: 5.8823529412%
+				}
+			}
+		}
+	}
+}
