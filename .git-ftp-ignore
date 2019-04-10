@@ -3,3 +3,5 @@ node_modules
 *.scss
 *.css.map
 package-lock.json
+.gitignore
+.git-ftp-ignore
