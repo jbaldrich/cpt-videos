@@ -1,3 +1,10 @@
 # Sass
 .sass-cache
 /node_modules/
+
+# Development ONLY
+
+# Production ONLY
+#package-lock.json
+#*.scss
+#*.css.map
